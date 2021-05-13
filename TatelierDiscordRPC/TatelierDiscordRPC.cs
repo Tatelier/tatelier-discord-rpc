@@ -8,7 +8,7 @@ namespace Tatelier.Module.DiscordRPC
 	
 		EventHandlers handlers;
 
-		RichPresence presence;
+		RichPresenceWrapper presence;
 
 		public IRichPresence Presence { get => presence; }
 
@@ -18,7 +18,7 @@ namespace Tatelier.Module.DiscordRPC
 		/// <param name="clientId">クライアント(アプリケーションID)</param>
 		public int Initialize(string clientId)
 		{
-			presence = new RichPresence();
+			presence = new RichPresenceWrapper();
 			Presence.LargeImageKey = "tatelier";
 			Presence.LargeImageText = "Tatelier";
 			Presence.SmallImageKey = "tatelier";
@@ -37,7 +37,7 @@ namespace Tatelier.Module.DiscordRPC
 		/// </summary>
 		public int UpdatePresence()
 		{
-			DiscordRPCAPI.UpdatePresence(ref presence);
+			DiscordRPCAPI.UpdatePresence(ref presence.Data);
 
 			return 0;
 		}

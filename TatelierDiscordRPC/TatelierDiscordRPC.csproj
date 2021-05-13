@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="EventHandlers.cs" />
     <Compile Include="RichPresence.cs" />
+    <Compile Include="RichPresenceWrapper.cs" />
     <Compile Include="TatelierDiscordRPC.cs" />
     <Compile Include="DiscordRPCAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
