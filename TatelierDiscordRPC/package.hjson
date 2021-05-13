@@ -1,0 +1,4 @@
+{
+	"type": "discord-rpc",
+	"main": "TatelierDiscordRPC.dll",
+}
